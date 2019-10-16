@@ -66,7 +66,7 @@ class Search extends Component {
             />
             <FormBtn         
               onClick={this.handleFormSubmit}
-              className="btn btn-info"
+              className="btn btn-info search"
             >
               Search
             </FormBtn>

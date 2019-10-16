@@ -2,8 +2,18 @@ body {
     font-family: Handlee;
 }
 
+.btn-info:not(:disabled):not(.disabled):active {
+    background-color: #cc00ffa2;
+    
+}
+
 .jumbotron {
-    margin-top: 1%;
+    padding-top: 10%;
+    background: url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1890,w_3363,x_0,y_193/f_auto,q_auto,w_1100/v1565628997/shape/mentalfloss/gettyimages-944631208.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: 50%;
 }
 
 h1 {
@@ -25,8 +35,9 @@ h1 {
     box-shadow: 0 0 5px #ff7300c9;
 }
 
-.delete, .save {
+.delete, .save, .search {
     border: none;
+    border-color: #00000000;
     outline: none;
     transition: 0.2s;
 }
@@ -49,4 +60,28 @@ h1 {
     background-color: #00ff55af;
     box-shadow: 0 0 4px #73ff00;
     transform: scale(1.05);
+}
+
+.search {
+    background-color: #5b0085a2;
+}
+
+.search:hover {
+    background-color: #ae00ffa2;
+    box-shadow: 8px 8px 6px -6px black, 0 0 5px #d400ff8f;
+}
+
+.search:active {
+    background-color: #cc00ffa2;
+    box-shadow: 8px 8px 6px -6px black;
+    transform: scale(0.9);
+}
+
+input:hover {
+    box-shadow: 0 0 8px #00000065;
+}
+
+.form-control:focus {
+    border: 1px solid #0000007e;
+    box-shadow: 0 0 8px #0059ff81;
 }
