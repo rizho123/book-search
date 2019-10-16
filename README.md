@@ -1,5 +1,5 @@
 ## Book Search
-##### Simple app used to search for your favorite books. Created with React and powered by Google Books API.
+##### Simple app used to search for your favorite books. Created with React and powered by Google Books API. [Check out the live version!](https://react-books-rz.herokuapp.com/ "Book it")
 
 <img width = 800 src = "https://github.com/rizho123/book-search/blob/master/client/src/assets/images/title.PNG?raw=true" style="border-radius: 10px; box-shadow: 3px 6px 6px #0000008c;">
 
