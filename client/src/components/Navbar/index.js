@@ -4,7 +4,7 @@ import "./style.css";
 
 const Navbar = props => (
     <div>
-        <ul className="nav nav-pills nav-justified">
+        <ul className="nav nav-pills nav-justified" id="navbar">
             <li>
                 <h1>Books Search</h1>
             </li>

@@ -5,6 +5,7 @@ import Results from "./pages/Results";
 import Saved from "./pages/Saved";
 import NoMatch from "./pages/NoMatch";
 import "./assets/general.css";
+import "./assets/script.js";
 
 const App = () => (
   <Router>

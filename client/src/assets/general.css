@@ -25,10 +25,28 @@ h1 {
     box-shadow: 0 0 5px #ff7300c9;
 }
 
-.btn-info {
-    
+.delete, .save {
+    border: none;
+    outline: none;
+    transition: 0.2s;
 }
 
-.book-btn {
+.delete {
+    background-color: #880000b6;
+}
 
+.delete:hover {
+    background-color: #ff0000af;
+    box-shadow: 0 0 4px #ff0000;
+    transform: scale(1.05);
+}
+
+.save {
+    background-color: #008d2faf;
+}
+
+.save:hover {
+    background-color: #00ff55af;
+    box-shadow: 0 0 4px #73ff00;
+    transform: scale(1.05);
 }

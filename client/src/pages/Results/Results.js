@@ -5,6 +5,7 @@ import { List, ListItem } from "../../components/List";
 import BookBtn from "../../components/BookBtn";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
+import Navbar from "../../components/Navbar";
 
 class Results extends Component {
   state = {
@@ -44,14 +45,11 @@ class Results extends Component {
     if (this.state.noResults) {
       return (
         <div>
+          <Navbar></Navbar>
           <Jumbotron>
-            <h1 className="display-4">(React) Google Books Search</h1>
-            <p className="lead">Search for and annotate books of interest.</p>
+            <h1>Search your favorite books and save them! </h1>
+            <p className="lead">Start with a title to begin...</p>
             <hr className="my-4" />
-            <p className="lead">
-              <Link className="btn btn-default btn-lg" to="/" role="button">New Search</Link>
-              <Link className="btn btn-default btn-lg" to="/saved" role="button">Saved Books</Link>
-            </p>
           </Jumbotron>
           <Container>
             <Link to="/">No results - click here to search again.</Link>
@@ -61,14 +59,11 @@ class Results extends Component {
     }
     return (
       <div>
+        <Navbar></Navbar>
         <Jumbotron>
-          <h1 className="display-4">(React) Google Books Search</h1>
-          <p className="lead">Search for and save books of interest.</p>
+          <h1>Search your favorite books and save them! </h1>
+          <p className="lead">Start with a title to begin...</p>
           <hr className="my-4" />
-          <p className="lead">
-            <Link className="btn btn-default btn-lg" to="/" role="button">New Search</Link>
-            <Link className="btn btn-default btn-lg" to="/saved" role="button">Saved Books</Link>
-          </p>
         </Jumbotron>
         <Container>
           <h2>Search Results</h2>
@@ -95,6 +90,7 @@ class Results extends Component {
                   <BookBtn
                     key={"" + book.id + index}
                     btntype="info"
+                    extraclass="save"
                     disabled={book.volumeInfo.infoLink === "/"}
                     onClick={() => this.saveBook({
                       title: book.volumeInfo.title,

@@ -5,6 +5,7 @@ import { List, ListItem } from "../../components/List";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import BookBtn from "../../components/BookBtn";
+import Navbar from "../../components/Navbar";
 
 class Saved extends Component {
   state = {
@@ -45,15 +46,12 @@ class Saved extends Component {
     if (this.state.noResults) {
       return (
         <div>
-          <Jumbotron>
-            <h1 className="display-4">(React) Google Books Search</h1>
-            <p className="lead">Search for and annotate books of interest.</p>
-            <hr className="my-4" />
-            <p className="lead">
-              <Link className="btn btn-default btn-lg" to="/" role="button">New Search</Link>
-              <Link className="btn btn-default btn-lg" to="/saved" role="button">Saved Books</Link>
-            </p>
-          </Jumbotron>
+          <Navbar></Navbar>
+        <Jumbotron>
+          <h1>Search your favorite books and save them! </h1>
+          <p className="lead">Start with a title to begin...</p>
+          <hr className="my-4" />
+        </Jumbotron>
           <Container>
             <Link to="/">You have no saved books. Click here to find some.</Link>
           </Container>
@@ -62,14 +60,11 @@ class Saved extends Component {
     }
     return (
       <div>
+        <Navbar></Navbar>
         <Jumbotron>
-          <h1 className="display-4">(React) Google Books Search</h1>
-          <p className="lead">Search for and save books of interest.</p>
+          <h1>Search your favorite books and save them! </h1>
+          <p className="lead">Start with a title to begin...</p>
           <hr className="my-4" />
-          <p className="lead">
-            <Link className="btn btn-default btn-lg" to="/" role="button">New Search</Link>
-            <Link className="btn btn-default btn-lg" to="/saved" role="button">Saved Books</Link>
-          </p>
         </Jumbotron>
         <Container>
           <h2>Saved Books</h2>
@@ -96,6 +91,7 @@ class Saved extends Component {
                   <BookBtn
                     key={book._id + "btn"}
                     btntype="info"
+                    extraclass="delete"
                     id={book._id}
                     disabled={book.link === "/"}
                     onClick={() => this.deleteBook(book._id)}
